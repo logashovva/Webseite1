@@ -1,0 +1,41 @@
+# Abhängigkeiten / Build-Artefakte
+node_modules/
+vendor/
+dist/
+build/
+.cache/
+.parcel-cache/
+.next/
+.nuxt/
+.svelte-kit/
+out/
+
+# Umgebungsvariablen & Secrets (WICHTIG!)
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS-spezifisch
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Lock-Files (optional – siehe Hinweis unten)
+# package-lock.json
+# yarn.lock
