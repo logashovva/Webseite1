@@ -1,35 +1,53 @@
-// Dark-Mode-Umschalter: fügt einen Button hinzu, der zwischen hellem
-// und dunklem Design wechselt.
-function darkModeUmschalten() {
-    document.body.classList.toggle("dark-mode");
-}
-
-// Schriftgröße des Absatzes anpassen: erhöht oder verringert die
-// Schriftgröße des <p>-Elements in 2px-Schritten (Barrierefreiheit).
-function schriftGroesseAendern(differenz) {
-    const absatz = document.querySelector("p");
-    const aktuelleGroesse = parseInt(window.getComputedStyle(absatz).fontSize);
-    const neueGroesse = Math.min(40, Math.max(12, aktuelleGroesse + differenz));
-    absatz.style.fontSize = neueGroesse + "px";
-}
-
-document.addEventListener("DOMContentLoaded", function () {
-    const darkModeButton = document.createElement("button");
-    darkModeButton.textContent = "Dark Mode umschalten";
-    darkModeButton.addEventListener("click", darkModeUmschalten);
-    document.body.appendChild(darkModeButton);
-
-    const groesserButton = document.createElement("button");
-    groesserButton.textContent = "Schrift größer (A+)";
-    groesserButton.addEventListener("click", function () {
-        schriftGroesseAendern(2);
+// Smooth Scrolling für Navigation
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
     });
-    document.body.appendChild(groesserButton);
+});
 
-    const kleinerButton = document.createElement("button");
-    kleinerButton.textContent = "Schrift kleiner (A-)";
-    kleinerButton.addEventListener("click", function () {
-        schriftGroesseAendern(-2);
+// Mobile Menu Toggle
+document.addEventListener('DOMContentLoaded', function () {
+    const menuButton = document.querySelector('.md\\:hidden');
+    const nav = document.querySelector('nav ul');
+    
+    if (menuButton) {
+        menuButton.addEventListener('click', function () {
+            // Toggle mobile menu (Implementierung je nach Anforderung)
+            console.log('Mobile menu clicked');
+        });
+    }
+
+    // Lazy Loading für Bilder
+    const images = document.querySelectorAll('img');
+    if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    observer.unobserve(entry.target);
+                }
+            });
+        });
+
+        images.forEach(img => {
+            img.style.opacity = '0';
+            img.style.transition = 'opacity 0.5s ease-in';
+            imageObserver.observe(img);
+        });
+    }
+
+    // Button Click Handler
+    const buttons = document.querySelectorAll('button:not(.md\\:hidden)');
+    buttons.forEach(button => {
+        button.addEventListener('click', function () {
+            console.log('Button clicked: ' + this.textContent);
+        });
     });
-    document.body.appendChild(kleinerButton);
 });

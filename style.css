@@ -1,22 +1,37 @@
-body{  
-    background-color: lightblue;
-    font-family: Arial, Helvetica, sans-serif;
+/* Tailwind CSS wird via CDN geladen */
+/* Zusätzliche Custom Styles */
+
+* {
+    scroll-behavior: smooth;
 }
-p{
-    color: red;
-    font-size: 20px;
+
+/* Hover Effekte für Links */
+a {
+    transition: all 0.3s ease;
 }
-h1{
-    color: green;
-    font-size: 40px;
+
+/* Smooth Scroll für Ankerpunkte */
+html {
+    scroll-behavior: smooth;
 }
-body.dark-mode{
-    background-color: #1a1a1a;
-    color: white;
+
+/* Button Hover Effekte */
+button {
+    transition: all 0.3s ease;
 }
-body.dark-mode p{
-    color: #ff6b6b;
+
+/* Responsive Images */
+img {
+    max-width: 100%;
+    height: auto;
 }
-body.dark-mode h1{
-    color: #6bff6b;
+
+/* Section Padding */
+section {
+    transition: all 0.3s ease;
+}
+
+/* Card Hover Effect */
+.shadow-lg:hover {
+    transform: translateY(-5px);
 }

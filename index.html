@@ -1,18 +1,225 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--CSS Datein einbinden-->
+    <title>Moderne Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
-    <title>wtf</title>
 </head>
-<body>
-<h1>Header</h1>
-<p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate. Voluptas, voluptate. Voluptas, voluptate. Voluptas, voluptate. Voluptas, voluptate. Voluptas, voluptate. Voluptas, voluptate. Voluptas, voluptate. Voluptas, voluptate. Voluptas, voluptate. Voluptas, voluptate. Voluptas, voluptate. Voluptas, voluptate.
-</p>
-<!--JavaScript Datei einbinden-->
-<script src="script.js"></script>
+<body class="bg-white text-gray-900">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-blue-600">Logo</div>
+            <ul class="hidden md:flex gap-8">
+                <li><a href="#home" class="hover:text-blue-600 transition">Home</a></li>
+                <li><a href="#services" class="hover:text-blue-600 transition">Services</a></li>
+                <li><a href="#portfolio" class="hover:text-blue-600 transition">Portfolio</a></li>
+                <li><a href="#about" class="hover:text-blue-600 transition">Über uns</a></li>
+            </ul>
+            <button class="md:hidden bg-blue-600 text-white px-4 py-2 rounded-lg">Menu</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-24">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
+            <div class="flex-1">
+                <h1 class="text-5xl font-bold mb-4">Willkommen zu unserer Website</h1>
+                <p class="text-xl mb-8 text-blue-100">Wir bieten innovative Lösungen für Ihre Geschäftsprobleme und helfen Ihnen, Ihre Ziele zu erreichen.</p>
+                <button class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition">
+                    Jetzt starten
+                </button>
+            </div>
+            <div class="flex-1">
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop" alt="Hero Image" class="rounded-lg shadow-2xl">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-4 text-center">Unsere Services</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+                Wir bieten umfassende Dienstleistungen, um Ihr Unternehmen zu unterstützen und zu wachsen.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service Card 1 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=250&fit=crop" alt="Service 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Beratung</h3>
+                        <p class="text-gray-600">Professionelle Beratung für strategische Entscheidungen und Geschäftsentwicklung.</p>
+                    </div>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=250&fit=crop" alt="Service 2" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Design</h3>
+                        <p class="text-gray-600">Modernes und ansprechendes Design für Ihre digitalen Projekte.</p>
+                    </div>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&h=250&fit=crop" alt="Service 3" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Entwicklung</h3>
+                        <p class="text-gray-600">Technische Entwicklung und Implementierung von Softwarelösungen.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-4 text-center">Unser Portfolio</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+                Schauen Sie sich einige unserer erfolgreichsten Projekte an.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition">
+                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=500&h=300&fit=crop" alt="Projekt 1" class="w-full h-80 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">Projekt Alpha</h3>
+                        <p class="text-gray-600">Ein erfolgreiches Web-Projekt mit modernem Design und optimierter Performance.</p>
+                    </div>
+                </div>
+
+                <div class="rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition">
+                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=300&fit=crop" alt="Projekt 2" class="w-full h-80 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">Projekt Beta</h3>
+                        <p class="text-gray-600">Eine umfassende Softwarelösung für Geschäftsprozessoptimierung.</p>
+                    </div>
+                </div>
+
+                <div class="rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition">
+                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=500&h=300&fit=crop" alt="Projekt 3" class="w-full h-80 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">Projekt Gamma</h3>
+                        <p class="text-gray-600">Ein innovatives Mobil-App-Projekt mit benutzerfreundlicher Oberfläche.</p>
+                    </div>
+                </div>
+
+                <div class="rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=300&fit=crop" alt="Projekt 4" class="w-full h-80 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">Projekt Delta</h3>
+                        <p class="text-gray-600">Ein E-Commerce-Projekt mit erweiterten Funktionalitäten und sicherer Zahlungsabwicklung.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-12 text-center">Über uns</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-white rounded-lg shadow-lg p-8 text-center">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop" alt="Team Member 1" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+                    <h3 class="text-xl font-bold mb-2">Max Müller</h3>
+                    <p class="text-gray-600">Lead Developer</p>
+                    <p class="text-gray-500 mt-4">Spezialisiert auf Web- und App-Entwicklung mit 10+ Jahren Erfahrung.</p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-8 text-center">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop" alt="Team Member 2" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+                    <h3 class="text-xl font-bold mb-2">Sarah Schmidt</h3>
+                    <p class="text-gray-600">UX/UI Designer</p>
+                    <p class="text-gray-500 mt-4">Kreative Designerin mit Fokus auf Benutzerfreundlichkeit und modernem Design.</p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-8 text-center">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop" alt="Team Member 3" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+                    <h3 class="text-xl font-bold mb-2">Thomas Weber</h3>
+                    <p class="text-gray-600">Project Manager</p>
+                    <p class="text-gray-500 mt-4">Erfahrener Projektmanager mit erfolgreicher Bilanz bei Großprojekten.</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg p-12">
+                <h3 class="text-2xl font-bold mb-4">Unsere Geschichte</h3>
+                <p class="text-gray-600 mb-4">
+                    Gegründet im Jahr 2015, haben wir uns zum führenden Anbieter innovativer Softwarelösungen entwickelt. Mit einem engagierten Team von Fachleuten arbeiten wir täglich daran, unseren Kunden die besten Ergebnisse zu liefern.
+                </p>
+                <p class="text-gray-600 mb-4">
+                    Unser Fokus liegt auf Qualität, Innovation und Kundenorientierung. Wir glauben, dass erfolgreiche Projekte auf starker Kommunikation und gegenseitigem Verständnis basieren.
+                </p>
+                <p class="text-gray-600">
+                    Mit mehr als 50 abgeschlossenen Projekten und zufriedenen Kunden weltweit, sind wir stolz auf unsere Leistungen und freuen uns auf zukünftige Zusammenarbeit.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-blue-600 text-white py-16">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-4">Bereit, Ihr Projekt zu starten?</h2>
+            <p class="text-xl mb-8 text-blue-100">
+                Kontaktieren Sie uns noch heute und lassen Sie uns gemeinsam etwas Großartiges erschaffen.
+            </p>
+            <button class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition">
+                Kontakt aufnehmen
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Über</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition">Unternehmen</a></li>
+                        <li><a href="#" class="hover:text-white transition">Team</a></li>
+                        <li><a href="#" class="hover:text-white transition">Karriere</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Services</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition">Beratung</a></li>
+                        <li><a href="#" class="hover:text-white transition">Design</a></li>
+                        <li><a href="#" class="hover:text-white transition">Entwicklung</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Rechtlich</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition">Datenschutz</a></li>
+                        <li><a href="#" class="hover:text-white transition">Impressum</a></li>
+                        <li><a href="#" class="hover:text-white transition">Bedingungen</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Kontakt</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Email: info@example.com</li>
+                        <li>Tel: +49 123 456789</li>
+                        <li>Adresse: Berlin, Deutschland</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>&copy; 2026 Modern Website. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
